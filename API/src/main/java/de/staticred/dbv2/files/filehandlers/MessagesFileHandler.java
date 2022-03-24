@@ -29,6 +29,10 @@ public class MessagesFileHandler extends DBUtilFile {
         return convertToMcString(configuration.getString(FileConstants.INVALID_CHANNEL));
     }
 
+    public String getFooter() {
+        return configuration.getString(FileConstants.FOOTER);
+    }
+
     private String convertToMcString(String convertable) {
         return convertable.replaceAll("&", "§");
     }
